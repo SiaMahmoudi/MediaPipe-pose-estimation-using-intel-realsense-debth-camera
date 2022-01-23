@@ -1,1 +1,1 @@
-# MediaPipe-pose-estimation-using-intel-realsense-debth-camera
+# MediaPipe-pose-estimation-using-intel-realsense-depth-camera
