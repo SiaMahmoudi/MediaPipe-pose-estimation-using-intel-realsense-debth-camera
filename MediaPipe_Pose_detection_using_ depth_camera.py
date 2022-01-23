@@ -431,15 +431,15 @@ while True:
         continue
     
     
-    # landmarks_D = []     
-    # # display depth of each landmarks 
-    # if len(joints)>= 1:
-    #         for i in range(len(joints)):
-    #             if 0<joints[i][0]<1280 and 0<joints[i][1]<720:                   
-    #                 cv2.putText(bgr_frame, str(depth_frame[joints[i][1], joints[i][0]]), joints[i] ,
-    #                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2, cv2.LINE_AA)
+    landmarks_D = []     
+    # display depth of each landmarks 
+    if len(joints)>= 1:
+            for i in range(len(joints)):
+                if 0<joints[i][0]<1280 and 0<joints[i][1]<720:                   
+                    cv2.putText(bgr_frame, str(depth_frame[joints[i][1], joints[i][0]]), joints[i] ,
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2, cv2.LINE_AA)
                         
-    #                 landmarks_D.append(int(depth_frame[joints[i][1], joints[i][0]]))
+                    landmarks_D.append(int(depth_frame[joints[i][1], joints[i][0]]))
     cv2.imshow("bgr frame", frame)
 
     key = cv2.waitKey(1)
