@@ -10,3 +10,5 @@ With a combination of two or three poses, we can create movements. Therefore som
 ![16](https://user-images.githubusercontent.com/83344958/151191200-40db769d-5046-4783-81cc-497a7c343f11.PNG)
 
 ![17](https://user-images.githubusercontent.com/83344958/151191222-41b2b49a-5376-4f29-a971-5c43d521da12.PNG)
+
+you can find more information in main.pdf
