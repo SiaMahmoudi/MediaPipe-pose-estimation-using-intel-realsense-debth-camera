@@ -219,6 +219,7 @@ def detectPose(image, depth_frame, pose, display=True):
         return output_image, landmarks_3D, landmarks_2D
         #return mp_drawing.plot_landmarks(results.pose_world_landmarks, mp_pose.POSE_CONNECTIONS)
 
+
 def calculateAngle(landmark1, landmark2, landmark3):
     '''
     This function calculates angle between three different landmarks.
@@ -260,10 +261,12 @@ def  calculate_landmarks_D(joints, depth_frame):
 
 def classifyPose(landmarks, output_image, joints , depth_frame,display=False):
     '''
-    This function classifies yoga poses depending upon the angles of various body joints.
+    This function classifies  poses depending upon the angles of various body joints.
     Args:
         landmarks: A list of detected landmarks of the person whose pose needs to be classified.
         output_image: A image of the person with the detected pose landmarks drawn.
+        joints: The list of x, y and z of the landkmarks.
+        depth_frame: depth_frame extracted from depth camera.
         display: A boolean value that is if set to true the function displays the resultant image with the pose label 
         written on it and returns nothing.
     Returns:
@@ -419,7 +422,7 @@ while True:
         # Perform Pose landmark detection.
         bgr_frame, landmarks, joints = detectPose(resized_color_image ,depth_frame , pose, display=False)    
     else:
-         bgr_frame, landmarks, joints = detectPose(bgr_frame,depth_frame ,pose, display=True)
+         bgr_frame, landmarks, joints = detectPose(bgr_frame,depth_frame ,pose, display=False)
         
     if landmarks:
         
